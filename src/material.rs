@@ -153,7 +153,7 @@ impl<'a> Material<'a> {
     /// Parameter values that define the strength of the emission of the material
     #[cfg(feature = "KHR_materials_emissive_strength")]
     #[cfg_attr(docsrs, doc(cfg(feature = "KHR_materials_emissive_strength")))]
-    pub fn emissive_strength(&self) -> Option<EmissiveStrength<'a>> {
+    pub fn emissive_strength(&self) -> Option<f32> {
         self.json.extensions.as_ref()?.emissive_strength.as_ref().map(|x| x.emissive_strength.0)
     }
 
